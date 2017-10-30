@@ -3,6 +3,13 @@ $background-color: #efefef;
 /* Font */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
+@import '_grid.scss';
+
+// Helpers
+.center { 
+	text-align: center;
+ }
+
 body {
 	// Override browser default padding and margin
 	margin: 0;
@@ -24,11 +31,30 @@ main {
 	// Vertically align content
 	display: flex;
 	align-items: center;
-  	justify-content: center;
-  	flex-direction: column;
-}
+	justify-content: center;
+	flex-direction: column;
+	&::after { 
+		content: "";
 
-#footer {
+		background: url("/assets/pyramids-1920.jpg");
+		background-position: bottom center;
+		opacity: 0.5;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1; 
+	}
+  	// background-color: black;
+  	// background-image: url("/assets/pyramids-1920.jpg");
+  	// background-position: bottom center;
+  	h1 { 
+  		margin: 0;
+  	}
+  }
+
+  #footer {
 	// make the copyright notics less in your face
 	text-align: center;
 	padding: 10px;
